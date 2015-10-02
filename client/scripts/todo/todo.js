@@ -1,5 +1,5 @@
 var todo = {
-  setup: function(todos){
+  setup: function(todos) {
     todo.app = new todo.App({
       el: '#todo-app',
       items: todos
@@ -11,7 +11,7 @@ var todo = {
     todo.api.sendRequest({
       method: 'GET',
       endpoint: 'http://localhost:3000/todos'
-    }, function(err, res){
+    }, function(err, res) {
       if (err) { throw err; }
       if (!debug) {
         todo.setup(res.todos);
